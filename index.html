@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Javascript Quiz App</title>
+  </head>
+  <body>
+    <div class="quiz-options">
+      <h2>Welcome To Quiz Hub</h2>
+      <label for="num-questions">Number of Questions:</label>
+      <input type="number" class="num-questions" min="1" value="5" />
+      <label for="quiz-category">Quiz Category:</label>
+      <select class="quiz-category">
+        <option value="9">General Knowledge</option>
+        <option value="23">History</option>
+        <option value="21">Sports</option>
+        <option value="22">Geography</option>
+        <option value="18">Science: Computer</option>
+        <option value="25">Art</option>
+        <option value="27">Animals</option>
+        <option value="26">Celebrities</option>
+        <option value="24">Politics</option>
+      </select>
+      <label for="quiz-type">Type of Quiz:</label>
+      <select class="quiz-type">
+        <option value="multiple">Multiple Choice</option>
+        <option value="boolean">True/False</option>
+      </select>
+      <label for="quiz-difficulty">Difficulty:</label>
+      <select class="quiz-difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button class="start-quiz">Start Quiz</button>
+    </div>
+
+    <div class="quiz-questions" style="display: none">
+      <h2>Quiz Questions</h2>
+      <p class="current-question">Question 1 of 5</p>
+      <div class="question-text"></div>
+      <div class="options"></div>
+      <button class="next-question">Next Question</button>
+      <button class="quit-quiz">Quit Quiz</button>
+    </div>
+
+    <div class="quiz-results" style="display: none">
+      <h2>Quiz Results</h2>
+      <p class="final-score">Your Score: 0</p>
+      <button class="play-again">Play New Quiz</button>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
