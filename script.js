@@ -37,13 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function startQuiz() {
-    await fetchQuestions();
-    score = 0;
-    currentQuestionIndex = 0;
-    updateQuestion();
-    quizOptions.style.display = "none";
-    quizResults.style.display = "none";
-    quizQuestions.style.display = "block";
+    const numQuestionsInput = document.querySelector(".num-questions");
+    const numQuestions = parseInt(numQuestionsInput.value);
+
+    if (numQuestions < 1 || numQuestions > 50) {
+      alert("Please enter a number of questions between 1 and 50.");
+    } else {
+      await fetchQuestions();
+      score = 0;
+      currentQuestionIndex = 0;
+      updateQuestion();
+      quizOptions.style.display = "none";
+      quizResults.style.display = "none";
+      quizQuestions.style.display = "block";
+    }
   }
 
   function updateQuestion() {
